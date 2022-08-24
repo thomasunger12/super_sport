@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cuerpo{
+    background: linear-gradient(orangered, orange);
+}
+.titulo{
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    margin: 35px;
+    font-family: "paraTitulos";
+}
+.barraNav{
+    color: white;
+    margin: 30px;
+    font-family: "losItems";
+}
+.lista{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.item{
+    height: 10px;
+    padding: 15px;
+    
+}
+
+.padre{
+    display: grid;
+    grid-template-columns: 300px 300px ;
+    grid-template-rows: 60px 250px;
+    justify-content: space-evenly;
+}
+.padre__secundario{
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: 60px 250px;
+    justify-content: center;
+}
+.subTit{
+    color: blue;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 35px;
+    font-family: "miFuente";
+    font-size: xx-large;
+}
+
+.imagen{
+    border: solid 4px black;
+    height: 250px;
+    width: 250px;
+    border-radius: 7px;
+    opacity: 0.9;
+    transition: all 0.5s;
+}
+.imagen:hover{
+    transform: scale(1.1);
+    opacity: 1;
+    border-radius: 17px;
+
+}
+.miniTit{
+    font-family: "sobreRopa";
+    font-size: large;
+    text-align:center;
+    text-decoration: underline;
+    color: azure;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.semiTit{
+    font-family: "otraFuente";
+    font-size: x-large;
+    text-decoration:underline;
+    text-align: center;
+}
+footer {
+    color: #000;
+    text-transform:capitalize;
+    margin-top: 50px;
+    margin-bottom: 350px;
+}
+@font-face{
+    font-family: "paraTitulos";
+    src: url("../fonts/titulos.otf");
+}
+@font-face{
+    font-family: "miFuente";
+    src: url("../fonts/letra1.ttf");
+}
+@font-face{
+    font-family: "otraFuente";
+    src: url("../fonts/Fragmentcore.otf");
+}
+@font-face{
+    font-family: "sobreRopa";
+    src: url("../fonts/subrayados.ttf");
+}
+@font-face{
+    font-family: "losItems";
+    src: url("../fonts/items.otf");
+}
+@media screen and (max-widht: 320px){
+    .padre{
+        grid-template-columns: 300px;
+        grid-template-rows: 60px 250px;
+        padding: 20px;
+
+    }
+    .padre__secundario{
+        grid-template-columns: 300px;
+        grid-template-rows: 60px 250px;
+        padding: 20px;
+    }
+}
+@media screen and (max-widht: 1200px ){
+    body{
+        background-color:darkred;
+    }
+}
